@@ -1,0 +1,77 @@
+@import '../../../assets/scss/global.scss';
+
+.recipe-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+
+    .recipe {
+        overflow: hidden;
+        width: 300px;
+        height: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 2%;
+        border-radius: 10px;
+        background-color: $primaryColor;
+
+        &-thumb {
+            width: 100%;
+        }
+
+        &-info {
+            padding: 10px;
+        }
+
+        &-title {
+            text-align: center;
+            color: #f1f1f1;
+            font-size: 18px;
+            margin: 0;
+        }
+    }
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+
+    app-search {
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+
+    button {
+        background: $primaryColor;
+        color: white;
+        border: none;
+        outline: none;
+        padding: 10px 15px;
+        margin: 0 5px;
+        border-radius: 20px;
+        transition: .2s;
+
+        &.active {
+            background-color: darken($primaryColor, 20%);;
+        }
+
+        &:hover {
+            background: darken($primaryColor, 20%);
+        }
+
+        &:active {
+            transform: translateY(1px);
+        }
+    }
+
+}

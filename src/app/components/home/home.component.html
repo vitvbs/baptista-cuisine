@@ -1,0 +1,20 @@
+
+<div class="search">
+    <app-search></app-search>
+</div>
+
+<div class="filter">
+    <div class="filter-first-line">
+        <button class="cuisine" value="{{ cuisine | lowercase }}" *ngFor="let cuisine of cuisines" (click)="getButtonValue($event)"> {{ cuisine }}</button>
+    </div>
+</div>
+
+<div class="recipe-list">
+    <li class="recipe" *ngFor="let recipe of recipes, let index = index" (click)="getRecipe(recipe.id)" [routerLink]="['/recipe', recipe.id]">
+        <img class="recipe-thumb" src="https://spoonacular.com/recipeImages/{{ recipe.id }}-556x370.jpg">
+        <div class="recipe-info">
+            <h2 class="recipe-title"> {{ recipe.title }} </h2>
+        </div>
+        
+    </li>
+</div>

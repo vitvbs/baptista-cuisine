@@ -1,0 +1,18 @@
+$primaryColor: #fe3547;
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    margin: 0;
+    
+    &::before {
+        content: '';
+        position: absolute;
+        height: 100vh;
+        width: 100vw;
+        background-image: url('/assets/img/13-handdrawn.png');
+        background-repeat: round;
+        opacity: 0.08;
+        z-index: -1;
+    }
+}
